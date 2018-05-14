@@ -6,9 +6,7 @@ app.use("/", express.static(__dirname + "/dist")); // This will serve the public
 
 app.get("/index", function(request, response) {
 
-    // Use render to run through ejs and then send up the index.ejs (which is my homepage)
     response.render('index');
-
     
 });
 
