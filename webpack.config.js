@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const bundlePath = path.resolve(__dirname, 'dist/');
 
 module.exports = {
     entry: './src/index.js',
@@ -24,15 +23,9 @@ module.exports = {
     resolve: { extensions: ['*', '.js', '.jsx'] },
     // tell webpack where to put bundled code and to serve files form bundle.js
     output: {
-        publicPath: bundlePath,
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
     },
-    // create dev server at LH3000
-    devServer: {
-        contentBase: path.join(__dirname, 'public'),
-        port: 3000,
-        publicPath: 'http://localhost:3000/dist'
-    },
-    // add hot modeule replacement
+    // add hot module replacement
     plugins: [ new webpack.HotModuleReplacementPlugin() ]
 };
