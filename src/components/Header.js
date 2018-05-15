@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+// import './sass/Header.sass';
+
 
 class Header extends Component{
     render(){
         return(
             <div className='Header'>
-                <div> header component </div>
+                <div>FreeCodeCamp React Leaderboard</div>
             </div>
         )
     }

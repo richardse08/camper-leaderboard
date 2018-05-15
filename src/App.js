@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-// import './App.css';
+import './sass/App.sass';
 
 
-import Header from './Header.js';
-import Footer from './Footer.js';
+
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 
 class App extends Component{
     render(){
@@ -12,7 +13,7 @@ class App extends Component{
                 <h1> Initial React page </h1>
                 <Header />
                 <Footer />
-            </div>    
+            </div>
         );
     }
 }

@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js',
     module: {
         rules: [
@@ -15,7 +16,7 @@ module.exports = {
             {
                 // use css-loader for .css files (needs style-loader to work)
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: [ 'sass-loader', 'style-loader', 'css-loader' ]
             }
         ]
     },
