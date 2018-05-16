@@ -4,6 +4,8 @@ import App from './App.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 
+// import './dist/css/project.css';
+
 
 
 // render app components

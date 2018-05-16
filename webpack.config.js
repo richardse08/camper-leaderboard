@@ -49,10 +49,10 @@ const config = {
     },
 
     output: {
-        // output the bundle file INTO dist folderbabel-
+        // output the bundle file INTO dist folder
         path: path.resolve(__dirname, 'dist'),
         // CHECK THIS
-        filename: '[name].js',
+        filename: 'js/[name].js',
     },
 
     // module: {
