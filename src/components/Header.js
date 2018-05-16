@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-// import 'project.css';
 
 class Header extends Component{
     render(){
         return(
             <div className='Header'>
-                <div>FreeCodeCamp React Leaderboard</div>
+                <div>FreeCodeCamp Leaderboard</div>
+                <div>Built with React</div>
             </div>
         )
     }
