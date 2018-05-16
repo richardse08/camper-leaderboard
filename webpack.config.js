@@ -1,4 +1,3 @@
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 const webpack = require('webpack');
@@ -19,7 +18,7 @@ const config = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: { 
                     presets: ['react', 'env'],
@@ -37,7 +36,7 @@ const config = {
         ]
     },
 
-    mode: 'development',
+    // mode: 'development',
 
     entry: {
         bundle: [
@@ -55,40 +54,13 @@ const config = {
         filename: 'js/[name].js',
     },
 
-    // module: {
-    //     rules: [
-    //         {
-    //             // use babel-loader for transforming .jsx files and es6
-    //             test: /\.(js|jsx)$/,
-    //             // CHECK THIS
-    //             exclude: /(node_modules|bower_components)/,
-    //             loader: 'babel-loader',
-    //             options: { 
-    //                 // CHECK THIS
-    //                 presets: ['react', 'env'],
-    //             }
-    //         },
-
-    //         {
-    //             // use css-loader for .css files (needs style-loader to work)
-    //             test: /\.sass$/,
-    //             // use: ['style-loader', 'css-loader', 'sass-loader']
-                
-    //             use: ExtractTextPlugin.extract({
-    //                 fallback:'style-loader',
-    //                 use: ['css-loader','sass-loader'],
-    //             })
-    //         }
-    //     ]
-    // },
-
-    // plugins: [
-    //     new ExtractTextPlugin('css/project.css', {
-    //         allChunks: true
-    //     })
-    // ],
-
     resolve: { extensions: ['*', '.js', '.jsx'] },
+
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 3000
+    }
 
 };
 
