@@ -5,27 +5,38 @@ class Body extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { dataEntry: 0 };
+        this.state = { usernameList: 0, pointsListRecent: 0 };
     }
 
-
-    render() {
+    componentDidMount() {
         let dataEntry;
         axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent')
         
         .then(response => {
-            dataEntry = response.data[0].username;
             let usernames = response.data;
-            let listItems = usernames.map((d) => <li key={d.username}>{d.username}</li>);
+            let usernameList = usernames.map((d) => <li key={d.username}>{d.username}</li>);
+            let pointsListRecent = usernames.map((d) => <li key={d.recent}>{d.recent}</li>);
 
-            this.setState({ listItems });
+
+            this.setState({ usernameList, pointsListRecent });
 
         });
+    }
+
+    render() {
+
 
 
         return (
             <div>
-                Name of person: {this.state.listItems}
+                <div className="left">
+                    Camper Name: {this.state.usernameList}            
+                </div>
+    
+                <div className="right">
+                    Camper Points: {this.state.pointsListRecent}
+                </div>
+                
             </div>
         );
 
