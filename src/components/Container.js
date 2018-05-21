@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import DataRequester from '../components/DataRequester.js';
-
 class Body extends React.Component {
 
     constructor(props) {
@@ -44,19 +42,19 @@ class Body extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>new test{ this.props.props }</div>
-                
+            <div className="Container">
+                <div>
+                    <button onClick={ () => this.getRecentData() } >Sort by Recent Points</button>
+                    <button onClick={ () => this.getAlltimeData() } >Sort by Alltime Points</button>
+                </div>
                 <div className="column">
                     Camper Name: {this.state.usernameList}
                 </div>
                 <div className="column">
-                <button onClick={ () => this.getRecentData() } >Sort by Recent Points</button>
-                    Camper Points: {this.state.pointsListRecent}
+                    <div>Camper Points: {this.state.pointsListRecent}</div>
                 </div>
                 <div className="column">
-                    <button onClick={ () => this.getAlltimeData() } >Sort by Alltime Points</button>
-                    Camper Points: {this.state.pointsListAlltime}
+                    <div>Camper Points: {this.state.pointsListAlltime}</div>
                 </div>
             </div>
         );
