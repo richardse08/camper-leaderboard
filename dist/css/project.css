@@ -1,36 +1,34 @@
 .App {
-  margin: 5rem;
   font-family: Arial, Helvetica, sans-serif;
-  border: solid;
-  color: blue;
-  height: 2000px;
-  padding: 15px; }
+  height: 2000px; }
 
 .Header {
-  width: 100%;
   border: solid;
-  color: red; }
+  border-radius: 10px 10px 0px 0px;
+  padding: 5px;
+  color: white;
+  background-color: #006400; }
 
 .Container {
-  width: 100%;
-  border: solid;
-  color: blue;
   margin-top: 15px;
-  padding: 15px;
-  height: 100%; }
+  height: 100%;
+  margin: auto;
+  max-width: 750px; }
 
 .column {
   float: left;
-  border: solid;
   color: green;
-  padding: 5px;
-  margin: 5px; }
+  margin: auto;
+  width: 200px;
+  padding-left: 40px; }
 
-.footer {
-  width: 100%;
+.Footer {
   border: solid;
-  color: green;
-  margin-top: 15px; }
+  background-color: #006400;
+  color: white;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 0px 0px 10px 10px; }
 
 .signature {
   text-align: center; }
