@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import DataRequester from '../components/DataRequester.js';
+
 class Body extends React.Component {
 
     constructor(props) {
@@ -43,6 +45,8 @@ class Body extends React.Component {
     render() {
         return (
             <div>
+                <div>new test{ this.props.props }</div>
+                
                 <div className="column">
                     Camper Name: {this.state.usernameList}
                 </div>
